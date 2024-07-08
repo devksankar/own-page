@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kylo King's Personal Webpage</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #900;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #900;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+        .light-mode {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .light-mode header,
+        .light-mode footer {
+            background-color: #f00;
+        }
+        .light-mode nav {
+            background-color: #ccc;
+        }
+        .light-mode nav a {
+            color: #000;
+        }
+        .project {
+            margin-bottom: 30px;
+        }
+        .time {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <header>
+        <h1>Kylo King's Personal Webpage</h1>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <button onclick="toggleDarkMode()" style="position: fixed; top: 10px; right: 10px; padding: 10px; background-color: #ff4500; color: #fff; border: none; cursor: pointer;">Toggle Dark Mode</button>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Kylo King. Welcome to my personal webpage.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="canvas.png" alt="Project 1 Image">
+            <p>Tigershot: <a href="https://editor.p5js.org/EclipseMaster0/full/Z26oY6If4" target="_blank" style="color: #ff4500;">Replica of Angry Birds 2</a></p>
+        </div>
+        <div class="project">
+            <img src="tiltedtowers.png" alt="Project 2 Image">
+            <p>FNshot: <a href="https://editor.p5js.org/EclipseMaster0/full/RnPjrLlqK" target="_blank" style="color: #ff4500;">Another duplicate of Angry Birds 2</a></p>
+        </div>
+        <div class="project">
+            <img src="https://via.placeholder.com/400x300?text=Project+3+Image" alt="Project 3 Image">
+            <p>Project 3: <a href="https://link-to-project-3.com" target="_blank" style="color: #ff4500;">Description of Project 3</a></p>
+        </div>
+    </section>
+    <section id="github">
+        <h2>GitHub</h2>
+        <img src="gitHub.webp" alt="GitHub Image">
+        <p>Check out my work on GitHub: <a href="https://github.com/devksankar" target="_blank" style="color: #ff4500;">devksankar@icloud.com</a></p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>You can reach me at: <a href="devksankar@icloud.com" style="color: #ff4500;">devksankar@icloud.com</a></p>
+    </section>
+    <div class="time">
+        <p id="datetime"></p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Kylo King</p>
+    </footer>
+    <script>
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle('light-mode');
+            body.classList.toggle('dark-mode');
+        }
+
+        function updateTime() {
+            var now = new Date();
+            var datetime = now.toLocaleString();
+            document.getElementById('datetime').textContent = datetime;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
